@@ -1,15 +1,36 @@
 import './App.css';
 
 function App() {
+  function func1()
+  {
+    let a = document.querySelector('.App-header');
+    a.style.backgroundColor = "blue";
+  }
+
+  function func2()
+  {
+    let a = document.querySelector('.App-header');
+    a.style.backgroundColor = "red";
+  }
+
+  function func3()
+  {
+    let a = document.querySelector('.App-header');
+    a.style.backgroundColor = "green";
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="https://img.wallscloud.net/uploads/thumb/1229675775/optimus-prime-transformers-KLr-1024x576-MM-80.webp" className="App-logo" alt="logo" />
+      <header className="App-header" id='elem'>
         <p>
-          Click по About US <span className="heart">♥️</span> 
+
+
+          <button onClick={func1} className="btnApp" id='btn1'>Синий</button>
+          <button onClick={func2} className="btnApp" id='btn2'>Красный</button>
+          <button onClick={func3} className="btnApp" id='btn3'>Зеленый</button>
+
         </p>
         <p className="small">
-        <img src="https://cdn-icons-png.flaticon.com/512/86/86477.png" width={100}/>
+        <img className='img1' src="https://cdn-icons-png.flaticon.com/512/86/86477.png" width={100}/>
 
         </p>
         <p>
@@ -19,12 +40,14 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            This is Megatron ?
           </a>
         </p>
       </header>
     </div>
   );
+  
 }
+
+
 
 export default App;
